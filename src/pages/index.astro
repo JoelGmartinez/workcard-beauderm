@@ -1,11 +1,446 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Form from "../components/Form.astro";
+import Card from "../components/Card-full.astro";
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const year = new Date().getFullYear();
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Beauderm" description="Medicina Estética Profesional Santa Marta">
+  <main class="bg-white">
+    <section class="hero w-full h-[40vh]"></section>
+
+    <section class="w-full flex place-content-center -mt-24 mb-32">
+      <Card />
+    </section>
+
+    <section class="mx-auto w-full flex place-content-center p-4 section-content-1 my-16">
+        <div class=" content-1 flex flex-row  rounded-2xl shadow-lg overflow-hidden h- max-w-[950px]">
+        
+          <div class="content-1-text w-1/2 p-8 flex flex-col justify-center gap-3">
+            <h2 class="text-4xl font-medium mb-5 text-[#ffd6d6]">Beauderm</h2>
+            <span class="text-xl text-gray-700">
+              <b>Profesional en medicina estética</b>
+            </span>
+            <p class="mt-4 text-gray-600">
+              Ubicado en el centro historico de Santa Marta, Beauderm es un
+              espacio privado y sin exhibición pública, pensado para personas
+              que valoran la atención médica ética, el respeto por los rasgos
+              naturales y la mejora real de la calidad de la piel. Aquí
+              priorizamos tu bienestar, tu proceso y tu ritmo.
+              <br /><br />
+              <b class="text-gray-800">Atendemos con cita previa.</b> Confidencialidad,
+              calidez y medicina estética con criterio.
+            </p>
+          </div>
+
+          <div
+            class="w-1/2 flex justify-end overflow-hidden content-1-img">
+            <img
+              class="object-cover h-full w-[80%]"
+              src="https://scontent.fbaq2-2.fna.fbcdn.net/v/t1.6435-9/89876908_107556274209625_3275078159959064576_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFriD7zcGS4reK42iS91EcML4QMYTWw1_IvhAxhNbDX8qzilfc9RU9rQbYhatHZgQkazBwAun2gnhwiZ3f6Azq0&_nc_ohc=G1mgog5rvOwQ7kNvwGK6RQx&_nc_oc=AdmRdk0VelaEthvT0lxsDxbZ9UZlDFIZkWnS3Ach4in9Wnsaf51E75mlY2BGCvBNHpo&_nc_zt=23&_nc_ht=scontent.fbaq2-2.fna&_nc_gid=o30b8FtkHrEBuh2FzMZtEQ&oh=00_AfRTGkj5OfbqFe8fEJLfEvOOaPtbtTgwOHaina14anJW7A&oe=68B4B10D"
+              alt="Doctora en el consultorio Beauderm"
+            />
+          </div>
+
+        </div>
+    </section>
+
+    <section
+      class="galería h-[800px] mb-16 bg-[#ffc0c01f] flex items-center place-content-center relative">
+      <div class="w-[1200px] flex place-content-center">
+        <div class="container mx-auto relative z-10">
+          <h2
+            class="text-[#ffa8a8] text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8">
+            Galería
+          </h2>
+          <p class="text-center text-lg mb-12"></p>
+
+          <div
+            class="content-card flex flex-wrap justify-center gap-8 mt-12 text-white max-w-[1200px] W-[100%]">
+
+            <div
+              class="relative flex-shrink-0 w-full max-w-[230px] h-[290px] overflow-hidden rounded-[15px] backdrop-blur-md  transition-transform duration-300 ease-in-out hover:-translate-y-2.5 group bg-black">
+              <div
+                class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out transform group-hover:scale-110 opacity-80 group-hover:opacity-50"
+                style="background-image: url('/consulta-estetica.webp');">
+              </div>
+                <h4
+                  class="absolute top-0 left-0 rosa mb-4 text-[1.4rem] p-5 font-semibold line">
+                   Consulta Personalizada
+                </h4>
+                  <p class="absolute -bottom-20 group-hover:bottom-0 p-3  mt-4 text-[0.9rem]  bg-black/50 transition-all duration-300 ease-in-out">
+                    Una valoración profunda, en un entorno tranquilo, para entender tu tipo de piel, tus objetivos y diseñar una rutina realista y efectiva.
+                  </p>
+            </div>
+
+            <div
+              class="relative flex-shrink-0 w-full max-w-[230px] h-[290px] overflow-hidden rounded-[15px] backdrop-blur-md  transition-transform duration-300 ease-in-out hover:-translate-y-2.5 group bg-black">
+              <div
+                class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out transform group-hover:scale-110 opacity-80 group-hover:opacity-50"
+                style="background-image: url('/plasma.webp');">
+              </div>
+                <h4
+                  class="absolute top-0 left-0 text-[#ffcaca] mb-4 text-[1.4rem] p-5 font-semibold line">
+                   Plasma Rico en Plaquetas (PRP)
+                </h4>
+                  <p class="absolute -bottom-20 group-hover:bottom-0 p-3  mt-4 text-[0.9rem]  bg-black/50 transition-all duration-300 ease-in-out">
+                    Tu propio cuerpo, tu mejor aliado. Tratamiento biológico para rejuvenecer, mejorar textura, firmeza y luminosidad de la piel.
+                  </p>
+            </div>
+
+            <div
+              class="relative flex-shrink-0 w-full max-w-[230px] h-[290px] overflow-hidden rounded-[15px] backdrop-blur-md  transition-transform duration-300 ease-in-out hover:-translate-y-2.5 group bg-black">
+              <div
+                class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out transform group-hover:scale-110 opacity-80 group-hover:opacity-50"
+                style="background-image: url('/Indiba.webp');">
+              </div>
+                <h4
+                  class="absolute top-0 left-0 text-[#ffcaca] mb-4 text-[1.4rem] p-5 font-semibold line">
+                   INDIBA® Deep Beauty
+                </h4>
+                  <p class="absolute -bottom-20 group-hover:bottom-0 p-3  mt-4 text-[0.9rem]  bg-black/50 transition-all duration-300 ease-in-out">
+                    Radiofrecuencia médica de última generación. Tecnología no invasiva que mejora flacidez, tono y circulación. Facial, capilar, corporal o íntima.
+                  </p>
+            </div>
+
+            <div
+              class="relative flex-shrink-0 w-full max-w-[230px] h-[290px] overflow-hidden rounded-[15px] backdrop-blur-md  transition-transform duration-300 ease-in-out hover:-translate-y-2.5 group bg-black">
+              <div
+                class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out transform group-hover:scale-110 opacity-80 group-hover:opacity-50"
+                style="background-image: url('/botox.webp');">
+              </div>
+                <h4
+                  class="absolute top-0 left-0 text-[#ffcaca] mb-4 text-[1.4rem] p-5 font-semibold line">
+                   Toxina Botulínica (Botox®)
+                </h4>
+                  <p class="absolute -bottom-15 group-hover:bottom-0 p-3  mt-4 text-[0.9rem]  bg-black/50 transition-all duration-300 ease-in-out">
+                    Previene y suaviza arrugas sin congelar la expresión. Tratamiento sutil para quienes buscan frescura, no rigidez.
+                  </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="img-servicios3 mx-auto grid max-w-2xl grid-cols-1 gap-x-10 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <img
+              src="https://scontent.fbaq2-2.fna.fbcdn.net/v/t1.6435-9/89920161_211432193295133_2037697016829575168_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeH_UyMtFgcd_IUWttK1tD2scHEWiydtohNwcRaLJ22iEyGoFegHsC6dwt85FkKi2PLAHqlIRhltmmyJAp2pyNox&_nc_ohc=Ycgm-6rEv6YQ7kNvwGAPdXI&_nc_oc=AdknVBXPzCaQEpLkBUlKiIcFGjksQZzHfIQNXH9FBo4ZSQydGGVegsY3jErcMV0ioZ0&_nc_zt=23&_nc_ht=scontent.fbaq2-2.fna&_nc_gid=BpINHnlRpGLiod2b7Tazmw&oh=00_AfRQlAaFWpq1rV4cYU6vKvvJqseWG6ErVIQiZ3gaOTlkmA&oe=68A5ED1E"
+              alt="Logo de Hostinger, servicio de hosting web recomendado"
+              class="w-full h-[] object-cover object-top max-w-none rounded-xl md:-ml-4 lg:-ml-0"
+              width="2432"
+              height="1442"
+            />
+
+            <div class="flex sigue">
+              <div
+                class="max-w-[500px] max-h-[200px] bg-[#ffd3d3] shadow-xl rounded-xl py-4 px-4 sticky top-[20px]">
+                <div class="flex justify-between">
+                  <h2 class="text-2xl font-semibold text-white">Siguenos:</h2>
+                  <ul class="flex gap-2 incons">
+                    <!-- <li><a href=""><svg width="25" height="auto" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="#ffff"/></svg></a></li> -->
+                    <li>
+                      <a href="">
+                        <svg
+                          width="25"
+                          height="auto"
+                          viewBox="0 0 3364.7 3364.7"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="#000000"
+                          ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"></g><g
+                            id="SVGRepo_iconCarrier"
+                            ><defs
+                              ><radialGradient
+                                id="0"
+                                cx="217.76"
+                                cy="3290.99"
+                                r="4271.92"
+                                gradientUnits="userSpaceOnUse"
+                                ><stop offset=".09" stop-color="#fa8f21"
+                                ></stop><stop offset=".78" stop-color="#d82d7e"
+                                ></stop></radialGradient
+                              ><radialGradient
+                                id="1"
+                                cx="2330.61"
+                                cy="3182.95"
+                                r="3759.33"
+                                gradientUnits="userSpaceOnUse"
+                                ><stop
+                                  offset=".64"
+                                  stop-color="#8c3aaa"
+                                  stop-opacity="0"></stop><stop
+                                  offset="1"
+                                  stop-color="#8c3aaa"></stop></radialGradient
+                              ></defs
+                            ><path
+                              d="M853.2,3352.8c-200.1-9.1-308.8-42.4-381.1-70.6-95.8-37.3-164.1-81.7-236-153.5S119.7,2988.6,82.6,2892.8c-28.2-72.3-61.5-181-70.6-381.1C2,2295.4,0,2230.5,0,1682.5s2.2-612.8,11.9-829.3C21,653.1,54.5,544.6,82.5,472.1,119.8,376.3,164.3,308,236,236c71.8-71.8,140.1-116.4,236-153.5C544.3,54.3,653,21,853.1,11.9,1069.5,2,1134.5,0,1682.3,0c548,0,612.8,2.2,829.3,11.9,200.1,9.1,308.6,42.6,381.1,70.6,95.8,37.1,164.1,81.7,236,153.5s116.2,140.2,153.5,236c28.2,72.3,61.5,181,70.6,381.1,9.9,216.5,11.9,281.3,11.9,829.3,0,547.8-2,612.8-11.9,829.3-9.1,200.1-42.6,308.8-70.6,381.1-37.3,95.8-81.7,164.1-153.5,235.9s-140.2,116.2-236,153.5c-72.3,28.2-181,61.5-381.1,70.6-216.3,9.9-281.3,11.9-829.3,11.9-547.8,0-612.8-1.9-829.1-11.9"
+                              fill="url(#0)"></path><path
+                              d="M853.2,3352.8c-200.1-9.1-308.8-42.4-381.1-70.6-95.8-37.3-164.1-81.7-236-153.5S119.7,2988.6,82.6,2892.8c-28.2-72.3-61.5-181-70.6-381.1C2,2295.4,0,2230.5,0,1682.5s2.2-612.8,11.9-829.3C21,653.1,54.5,544.6,82.5,472.1,119.8,376.3,164.3,308,236,236c71.8-71.8,140.1-116.4,236-153.5C544.3,54.3,653,21,853.1,11.9,1069.5,2,1134.5,0,1682.3,0c548,0,612.8,2.2,829.3,11.9,200.1,9.1,308.6,42.6,381.1,70.6,95.8,37.1,164.1,81.7,236,153.5s116.2,140.2,153.5,236c28.2,72.3,61.5,181,70.6,381.1,9.9,216.5,11.9,281.3,11.9,829.3,0,547.8-2,612.8-11.9,829.3-9.1,200.1-42.6,308.8-70.6,381.1-37.3,95.8-81.7,164.1-153.5,235.9s-140.2,116.2-236,153.5c-72.3,28.2-181,61.5-381.1,70.6-216.3,9.9-281.3,11.9-829.3,11.9-547.8,0-612.8-1.9-829.1-11.9"
+                              fill="url(#1)"></path><path
+                              d="M1269.25,1689.52c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7-416.6-186.59-416.6-416.7m-225.26,0c0,354.5,287.36,641.86,641.86,641.86s641.86-287.36,641.86-641.86-287.36-641.86-641.86-641.86S1044,1335,1044,1689.52m1159.13-667.31a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M1180.85,2707c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27S2059.13,666,2191,672c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M1170.5,447.09c-133.07,6.06-224,27.16-303.41,58.06-82.19,31.91-151.86,74.72-221.43,144.18S533.39,788.47,501.48,870.76c-30.9,79.46-52,170.34-58.06,303.41-6.16,133.28-7.57,175.89-7.57,515.35s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43s139.14,112.18,221.43,144.18c79.56,30.9,170.34,52,303.41,58.06,133.35,6.06,175.89,7.57,515.35,7.57s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2586.8,537.06,2504.71,505.15c-79.56-30.9-170.44-52.1-303.41-58.06C2068,441,2025.41,439.52,1686,439.52s-382.1,1.41-515.45,7.57"
+                              fill="#ffffff"></path></g
+                          ></svg
+                        ></a
+                      >
+                    </li>
+                    <!-- <li><a href=""><svg width="25" height="auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#0076b2" d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z"/><path fill="#fff" d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"/></svg></a></li> -->
+                    <li>
+                      <a href=""
+                        ><svg
+                          width="25"
+                          height="auto"
+                          viewBox="0 0 36 36"
+                          fill="url(#facebook__a)"
+                          ><defs
+                            ><linearGradient
+                              x1="50%"
+                              x2="50%"
+                              y1="97.078%"
+                              y2="0%"
+                              id="facebook__a"
+                              ><stop offset="0%" stop-color="#0062E0"
+                              ></stop><stop offset="100%" stop-color="#19AFFF"
+                              ></stop></linearGradient
+                            ></defs
+                          ><path
+                            d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"
+                          ></path><path
+                            fill="#FFF"
+                            d="m25 23 .8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"
+                          ></path></svg
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href=""
+                        ><svg
+                          width="25"
+                          height="auto"
+                          viewBox="0 0 256 259"
+                          xmlns="http://www.w3.org/2000/svg"
+                          preserveAspectRatio="xMidYMid"
+                          ><path
+                            d="m67.663 221.823 4.185 2.093c17.44 10.463 36.971 15.346 56.503 15.346 61.385 0 111.609-50.224 111.609-111.609 0-29.297-11.859-57.897-32.785-78.824-20.927-20.927-48.83-32.785-78.824-32.785-61.385 0-111.61 50.224-110.912 112.307 0 20.926 6.278 41.156 16.741 58.594l2.79 4.186-11.16 41.156 41.853-10.464Z"
+                            fill="#00E676"></path><path
+                            d="M219.033 37.668C195.316 13.254 162.531 0 129.048 0 57.898 0 .698 57.897 1.395 128.35c0 22.322 6.278 43.947 16.742 63.478L0 258.096l67.663-17.439c18.834 10.464 39.76 15.347 60.688 15.347 70.453 0 127.653-57.898 127.653-128.35 0-34.181-13.254-66.269-36.97-89.986ZM129.048 234.38c-18.834 0-37.668-4.882-53.712-14.648l-4.185-2.093-40.458 10.463 10.463-39.76-2.79-4.186C7.673 134.63 22.322 69.058 72.546 38.365c50.224-30.692 115.097-16.043 145.79 34.181 30.692 50.224 16.043 115.097-34.18 145.79-16.045 10.463-35.576 16.043-55.108 16.043Zm61.385-77.428-7.673-3.488s-11.16-4.883-18.136-8.371c-.698 0-1.395-.698-2.093-.698-2.093 0-3.488.698-4.883 1.396 0 0-.697.697-10.463 11.858-.698 1.395-2.093 2.093-3.488 2.093h-.698c-.697 0-2.092-.698-2.79-1.395l-3.488-1.395c-7.673-3.488-14.648-7.674-20.229-13.254-1.395-1.395-3.488-2.79-4.883-4.185-4.883-4.883-9.766-10.464-13.253-16.742l-.698-1.395c-.697-.698-.697-1.395-1.395-2.79 0-1.395 0-2.79.698-3.488 0 0 2.79-3.488 4.882-5.58 1.396-1.396 2.093-3.488 3.488-4.883 1.395-2.093 2.093-4.883 1.395-6.976-.697-3.488-9.068-22.322-11.16-26.507-1.396-2.093-2.79-2.79-4.883-3.488H83.01c-1.396 0-2.79.698-4.186.698l-.698.697c-1.395.698-2.79 2.093-4.185 2.79-1.395 1.396-2.093 2.79-3.488 4.186-4.883 6.278-7.673 13.951-7.673 21.624 0 5.58 1.395 11.161 3.488 16.044l.698 2.093c6.278 13.253 14.648 25.112 25.81 35.575l2.79 2.79c2.092 2.093 4.185 3.488 5.58 5.58 14.649 12.557 31.39 21.625 50.224 26.508 2.093.697 4.883.697 6.976 1.395h6.975c3.488 0 7.673-1.395 10.464-2.79 2.092-1.395 3.487-1.395 4.882-2.79l1.396-1.396c1.395-1.395 2.79-2.092 4.185-3.487 1.395-1.395 2.79-2.79 3.488-4.186 1.395-2.79 2.092-6.278 2.79-9.765v-4.883s-.698-.698-2.093-1.395Z"
+                            fill="#FFF"></path></svg
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-4 text-sm text-black bg-white p-2 rounded">
+                  <h3 class="text-xl font-medium mb-2">
+                    Estamos a tu disposición
+                  </h3>
+
+                  <p class="">
+                    Siguenos en nuestras redes sociales, contactanos, conocenos
+                    y trabajemos juntos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="sec-form min-h-[500px] flex items-center justify-center mb-16 gap-20 px-16">
+      <div class="w-1/2 flex place-content-end ">
+        <iframe
+          class="rounded-2xl foto-footer"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.5795956058812!2d-74.21228916504967!3d11.241277646665694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef4f57c81b1fc0f%3A0xb5b39cad74d22c52!2sBMN%20%7C%20Laboratorio%20Cl%C3%ADnico%20Betty%20Mercado%20Niebles%20%7C%20Santa%20Marta!5e0!3m2!1ses-419!2sco!4v1753123544956!5m2!1ses-419!2sco"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="w-1/2 flex ">
+        <!-- <Form /> -->
+        <img
+          class=" max-h-[450px] w-[460px] foto-footer rounded-2xl object-cover object-top"
+          src="/Laura.jpg"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <footer class="flex place-content-center p-2 relative">
+      <div
+        class="footer-copyright text-center z-1 bg-[#222222] p-1.5 rounded-2xl w-auto text-white flex place-content-center">
+        © {year} Joel Martínez Gómez - Todos los derechos reservados.
+      </div>
+    </footer>
+  </main>
 </Layout>
+
+<style>
+  .hero {
+    background-image: url('/beauderm-logo.webp');
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+  }
+  .line{
+    line-height: 1.2;
+  }
+
+  .card2 ul li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+  }
+
+  .galería::after {
+    content: "";
+    height: 8.75rem;
+    background-color: #fff;
+    clip-path: polygon(100% 9%, 0% 100%, 100% 100%);
+    width: 100%;
+    position: absolute;
+    bottom: -0.5px;
+    right: 0;
+    box-sizing: border-box;
+  }
+
+  .galería::before {
+    content: "";
+    height: 8.75rem;
+    background-color: #fff;
+    clip-path: polygon(0 90%, 0 0, 100% 0);
+    width: 100%;
+    position: absolute;
+    top: -0.4px;
+    right: 0;
+    box-sizing: border-box;
+  }
+
+  .incons li {
+    transition: all ease 0.2s;
+  }
+  .incons li:hover {
+    scale: 1.5;
+  }
+  footer::before {
+    content: "";
+    height: 2px;
+    background-color: #3d3d3d6f;
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 1200px) {
+  }
+
+  @media (max-width: 1025px) {
+    .content-card {
+      width: 100%;
+    }
+    .sigue {
+      place-content: center;
+    }
+    .section-content-1{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .content-1{
+      width: 80%;
+      justify-content: center;
+      align-items: center;
+      
+      
+    }
+    .content-1-img{
+      
+      height:435px ;
+      justify-content: center;
+      
+    }
+    .content-1-img img{
+      
+      object-fit: cover;
+      width: 100%;
+      
+    }
+
+  }
+
+  @media (max-width: 900px) {
+    .sec-form {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .sec-form div {
+      width: 100%;
+      justify-content: center;
+    }
+    .galería {
+      height: 1000px;
+    }
+
+    .content-1{
+      flex-direction: column;
+
+    }
+    .content-1-text{
+      width: 100%;
+    }
+  .hero{
+    background-size: cover;
+    background-attachment: local;
+    background-position-y: 0;
+  }
+
+   .content-1-img{
+      
+      width: 100%;
+      
+    }
+
+  }
+
+  @media (max-width: 620px) {
+
+    .content-1{
+      width: 95%;
+      
+    }
+  .foto-footer{
+    min-width: 95%;
+  }
+  }
+
+  @media (max-width: 500px) {
+    .galería {
+      height: auto;
+      padding: 20px;
+    }
+
+    .content-card {
+      gap: 10px;
+    }
+    .footer-copyright {
+      font-size: 10px;
+    }
+    
+  }
+</style>
