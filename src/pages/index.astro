@@ -52,8 +52,8 @@ const year = new Date().getFullYear();
       <div class="w-[1200px] flex place-content-center">
         <div class="container mx-auto relative z-10">
           <h2
-            class="text-[#ffa8a8] text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8">
-            Galería
+            class="text-[#ffc0c0] text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8">
+            Servicios
           </h2>
           <p class="text-center text-lg mb-12"></p>
 
@@ -114,7 +114,7 @@ const year = new Date().getFullYear();
                   class="card-title absolute top-0 left-0 rosa mb-4 text-[1.4rem] p-5 font-semibold line">
                    Toxina Botulínica (Botox®)
                 </h4>
-                  <p class="card-text absolute -bottom-20 p-3  mt-4 text-[0.9rem]  bg-black/50 transition-all duration-300 ease-in-out">
+                  <p class="card-text absolute card-bottom p-3  mt-4 text-[0.9rem]  bg-black/50 transition-all duration-300 ease-in-out">
                      Previene y suaviza arrugas sin congelar la expresión. Tratamiento sutil para quienes buscan frescura, no rigidez.
                   </p>
             </div>
@@ -302,6 +302,9 @@ const year = new Date().getFullYear();
   }
   .card:hover .card-text{
     bottom: 0 !important;
+  }
+  .card-bottom{
+    bottom: -60px;
   }
 
   .galería::after {
